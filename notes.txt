@@ -28,3 +28,6 @@ We will use “Wikipedia 2014 + Gigaword 5” which is the smallest file (“ gl
 It was trained on a corpus of 6 billion tokens and contains a vocabulary of 400 thousand tokens.
 After unzipping the downloaded file we find four txt files: glove.6B.50d.txt, glove.6B.100d.txt, glove.6B.200d.txt, glove.6B.300d.txt.
 As their filenames suggests, they have vectors with different dimensions.
+
+
+Used Glove word embeddings but vocabulary and dataset are from WMT Website.
