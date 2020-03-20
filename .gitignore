@@ -3,3 +3,5 @@ vocab.50K.de
 train.de
 train.en
 glove.6B.50d.txt
+6B.50_idx.pkl
+6B.50_words.pkl
