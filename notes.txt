@@ -1,0 +1,30 @@
+Recurrent Networks are inherently sequential
+This prevents parallelization within training examples
+Other approaches to seq2seq
+.ConvS2S
+.ByteNet
+
+
+The final output of the encoder is used as input for each layer in the decoder
+Each layer in the encoder has 2 sublayers
+.A self attention sublayer
+.A pointwise feedforward network (One eural net applied in parallel to all outputs of the self attention layer)
+
+Self Attention
+A way of computing a representation of an input sequence by relating the elements of the input sequence
+with each other
+In computing the representation of a given elementof of a sequence , use the other elements in the sequence
+
+
+Self Attention sublayers receive a list of fixed length vectors as input and produce output of the same dimension
+
+In the original paper dimension of q,k and v is 1X64
+
+
+Since attention vector is calculated 8 times we reduce the size of Q,K and V vectors by 8 times
+to kee the number of computations same.
+
+We will use “Wikipedia 2014 + Gigaword 5” which is the smallest file (“ glove.6B.zip”) with 822 MB.
+It was trained on a corpus of 6 billion tokens and contains a vocabulary of 400 thousand tokens.
+After unzipping the downloaded file we find four txt files: glove.6B.50d.txt, glove.6B.100d.txt, glove.6B.200d.txt, glove.6B.300d.txt.
+As their filenames suggests, they have vectors with different dimensions.

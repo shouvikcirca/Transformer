@@ -21,4 +21,23 @@ http://jalammar.github.io/illustrated-transformer/
   
   
 What is Teacher Forcing for Recurrent Neural Networks?  
-https://machinelearningmastery.com/teacher-forcing-for-recurrent-neural-networks/
+https://machinelearningmastery.com/teacher-forcing-for-recurrent-neural-networks/  
+  
+  
+  
+How to use Pre-trained Word Embeddings in PyTorch  
+https://medium.com/@martinpella/how-to-use-pre-trained-word-embeddings-in-pytorch-71ca59249f76  
+  
+  
+  
+English Vocabulary - https://nlp.stanford.edu/projects/nmt/data/wmt14.en-de/vocab.50K.en    
+German Vocabulary  - https://nlp.stanford.edu/projects/nmt/data/wmt14.en-de/vocab.50K.de  
+  
+  
+Glove pretrained Word Embeddings  
+http://nlp.stanford.edu/data/wordvecs/glove.6B.zip  
+  
+  
+  
+Glove Website  
+https://nlp.stanford.edu/projects/glove/
