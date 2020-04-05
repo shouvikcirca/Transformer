@@ -35,9 +35,14 @@ German Vocabulary  - https://nlp.stanford.edu/projects/nmt/data/wmt14.en-de/voca
   
   
 Glove pretrained Word Embeddings  
-http://nlp.stanford.edu/data/wordvecs/glove.6B.zip  
+English - http://nlp.stanford.edu/data/wordvecs/glove.6B.zip  
+German - https://int-emb-glove-de-wiki.s3.eu-central-1.amazonaws.com/vectors.txt  
+ 
   
   
   
 Glove Website  
-https://nlp.stanford.edu/projects/glove/
+https://nlp.stanford.edu/projects/glove/  
+  
+ 
+https://d2l.ai/chapter_attention-mechanisms/transformer.html
