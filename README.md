@@ -45,4 +45,16 @@ Glove Website
 https://nlp.stanford.edu/projects/glove/  
   
  
-https://d2l.ai/chapter_attention-mechanisms/transformer.html
+https://d2l.ai/chapter_attention-mechanisms/transformer.html  
+  
+  
+German Word Embeddings
+https://huggingface.co/dbmdz/bert-base-german-uncased  
+  
+  
+  
+English word Embeddings  
+https://huggingface.co/transformers/model_doc/bert.html  
+  
+  
+
