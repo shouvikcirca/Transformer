@@ -57,7 +57,13 @@ English word Embeddings
 https://huggingface.co/transformers/model_doc/bert.html  
   
 Gensim word vectors  
-https://www.youtube.com/watch?v=Z1VsHYcNXDI&t=72s
+https://www.youtube.com/watch?v=Z1VsHYcNXDI&t=72s  
+  
+Theories Of Selective Attention  
+https://www.youtube.com/watch?v=qpsaHE_uZic  
+  
+Dive Into Deep Learning  
+https://d2l.ai/
   
   
 
