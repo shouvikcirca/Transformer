@@ -1,4 +1,6 @@
 pytorch
 numpy
 pickle
+gensim
 bcolz
+nltk

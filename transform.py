@@ -1,6 +1,5 @@
 import torch 
 import torch.nn as nn
-import fasttext as ft
 import math
 import torch.nn.functional as F
 import pickle
