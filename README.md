@@ -39,7 +39,8 @@ Dive Into Deep Learning
 https://d2l.ai/  
 
 Info about Training and Inference in Transformer  
-https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04
+https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04  
   
-  
+German and English sentences  
+https://nlp.stanford.edu/projects/nmt/ 
 
