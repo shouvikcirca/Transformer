@@ -42,9 +42,19 @@ Info about Training and Inference in Transformer
 https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04  
   
 German and English sentences  
-https://nlp.stanford.edu/projects/nmt/  
+https://nlp.stanford.edu/projects/nmt/   
+  
   
   
 
+**Installing dependencies**
+```
+pip3 -r requirements.txt
+```    
+  
+  
+    
+
+**Inference**
 ![Inference](demo/inference.gif) 
 
