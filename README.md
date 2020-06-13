@@ -55,6 +55,7 @@ pip3 -r requirements.txt
   
     
 
-**Inference**
+**Inference**  
+
 ![Inference](demo/inference.gif) 
 
