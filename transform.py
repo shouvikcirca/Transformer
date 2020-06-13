@@ -430,13 +430,13 @@ class Decoder():
 # Doing this because input sentences have to be limited to corpus 
 ##################################################################################################
 germanSens = pickle.load(open(f'subsampledGermanSens.pkl', 'rb'))
-englishSens = pickle.load(open(f'subsampledEnglishSens.pkl', 'rb')
+englishSens = pickle.load(open(f'subsampledEnglishSens.pkl', 'rb'))
 
 
 # Padding english and german sentences to same length
 def initialPadding(germanSens, englishSens):
-    germanVecs = [nltk.word_tokenize(sentence) for sentence in germanSens]
-    englishVecs = [nltk.word_tokenize(sentence) for sentence in englishSens]
+    germanVecs = [nltk.word_tokenize(sentence.lower()) for sentence in germanSens]
+    englishVecs = [nltk.word_tokenize(sentence.lower()) for sentence in englishSens]
     
     germanVecs = [['sos']+i+['eos'] for i in germanVecs]
     englishVecs = [i+['eos'] for i in englishVecs]
@@ -472,6 +472,13 @@ germanVecs, englishVecs = initialPadding(germanSens, englishSens)
 modelEnglish = Word2Vec(englishVecs, min_count=1, size=10)
 modelGerman = Word2Vec(germanVecs, min_count=1, size=10)
 
+#creating word2index for german with 'sos'
+word2index_german = {}
+ind = 0
+
+for k in modelGerman.wv.vocab:
+    word2index_german[k] = ind
+    ind+=1
 
 ###########################################################################################3
 
@@ -495,36 +502,30 @@ mapToVocab = nn.Sequential(
 
 
 # Inference
-
-
-eng_example = input('Enter Sentence in English')
+eng_example = input('Enter Sentence in English\n')
 englishVec = nltk.word_tokenize(eng_example) + ['eos']
 
 
 
-eng_example = getWordVecs(englishVec,'en')
-each_sentence_length = eng_example.shape[0]
+englishVec = getWordVecs(englishVec,'en')
+each_sentence_length = englishVec.shape[0]
 
-germ = getWordVecs(['sos' for _ in range(eng_example.shape[0])],'de')
+germ = getWordVecs(['sos' for _ in range(englishVec.shape[0])],'de')
 temp = germ.clone()
 
+e = Encoder()
+d = Decoder()
+
 for i in range(each_sentence_length):
-    Encoder_output = e.forward(eng_example)
+    Encoder_output = e.forward(englishVec)
     Decoder_output = d.forward(germ)
     
     temp[i] = Decoder_output[i]
     germ = temp.clone()
-    print(germ)
+    # print(germ)
     
 
 
-#creating word2index for german with 'sos'
-word2index_german = {}
-ind = 0
-
-for k in modelGerman.wv.vocab:
-    word2index_german[k] = ind
-    ind+=1
 
 
 
@@ -536,11 +537,11 @@ w2i.pop('sos')
 predOneHotVector_inference = torch.zeros(len(w2i)).long()
 ind = 32
 translated_string = ''
-print(englishSens[ind])
+#print(eng_example)
 print()    
 mappings = [torch.argmax(i) for i in germ]
 for i in mappings:
-    predOneHotVector[i] = 1
+    predOneHotVector_inference[i] = 1
     for k in w2i:
         if w2i[k] == i:
             translated_string+=(k+' ')
