@@ -254,8 +254,8 @@ class Decoder():
     def qk_dotproducts_maskedAttention(self,queries, keys):
         finalMatrix = torch.Tensor([])
         for i in range(queries.shape[0]):
-            b = self.maskedMatrix(queries,i)
-            c = self.dotProductMaskedMatrix(b[i],b)
+            b = self.maskedMatrix(keys,i)
+            c = self.dotProductMaskedMatrix(queries[i],b)
             finalMatrix = torch.cat([finalMatrix,c.unsqueeze(0)])
     
         return finalMatrix
