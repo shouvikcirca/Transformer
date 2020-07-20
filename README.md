@@ -59,3 +59,7 @@ pip3 -r requirements.txt
 
 ![Inference](demo/inference.gif) 
 
+
+For an explanation of the model checkout presentation/presentation_merged.pdf
+
+
